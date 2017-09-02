@@ -1,5 +1,5 @@
 //
-//  GetLastestCities.swift
+//  GetLastestCitiesUseCase.swift
 //  WeatherApp
 //
 //  Created by Rodrigo López-Romero Guijarro on 02/09/2017.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+class GetLatestCitiesUseCase {
+    
+}

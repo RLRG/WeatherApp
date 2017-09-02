@@ -11,5 +11,4 @@ import Foundation
 struct City {
     let name:String
     let timeRequested:Date
-    let location: Location
 }

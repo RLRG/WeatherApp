@@ -24,8 +24,8 @@
 		37DD3BE41F59DCDE00065466 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BE21F59DCDE00065466 /* Location.swift */; };
 		37DD3BE61F59DCED00065466 /* WeatherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BE51F59DCED00065466 /* WeatherResult.swift */; };
 		37DD3BE71F59DCED00065466 /* WeatherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BE51F59DCED00065466 /* WeatherResult.swift */; };
-		37DD3BEB1F5B0BEC00065466 /* GetLastestCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BEA1F5B0BEC00065466 /* GetLastestCities.swift */; };
-		37DD3BEC1F5B0BEC00065466 /* GetLastestCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BEA1F5B0BEC00065466 /* GetLastestCities.swift */; };
+		37DD3BEB1F5B0BEC00065466 /* GetLastestCitiesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BEA1F5B0BEC00065466 /* GetLastestCitiesUseCase.swift */; };
+		37DD3BEC1F5B0BEC00065466 /* GetLastestCitiesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BEA1F5B0BEC00065466 /* GetLastestCitiesUseCase.swift */; };
 		37DD3BEE1F5B0DDE00065466 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BED1F5B0DDE00065466 /* SearchViewController.swift */; };
 		37DD3BEF1F5B0DDE00065466 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BED1F5B0DDE00065466 /* SearchViewController.swift */; };
 		37DD3BF31F5B0F9D00065466 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BF21F5B0F9D00065466 /* WebViewViewController.swift */; };
@@ -34,6 +34,22 @@
 		37DD3BF71F5B105700065466 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BF51F5B105700065466 /* Constants.swift */; };
 		37DD3BF91F5B175500065466 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BF81F5B175500065466 /* ResultViewController.swift */; };
 		37DD3BFA1F5B175500065466 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BF81F5B175500065466 /* ResultViewController.swift */; };
+		37DD3C031F5B1A6400065466 /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BFD1F5B1A6400065466 /* DomainConvertibleType.swift */; };
+		37DD3C041F5B1A6400065466 /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BFD1F5B1A6400065466 /* DomainConvertibleType.swift */; };
+		37DD3C051F5B1A6400065466 /* ObservableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BFE1F5B1A6400065466 /* ObservableExt.swift */; };
+		37DD3C061F5B1A6400065466 /* ObservableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BFE1F5B1A6400065466 /* ObservableExt.swift */; };
+		37DD3C071F5B1A6400065466 /* RealmExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BFF1F5B1A6400065466 /* RealmExt.swift */; };
+		37DD3C081F5B1A6400065466 /* RealmExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3BFF1F5B1A6400065466 /* RealmExt.swift */; };
+		37DD3C091F5B1A6400065466 /* RealmRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C001F5B1A6400065466 /* RealmRepo.swift */; };
+		37DD3C0A1F5B1A6400065466 /* RealmRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C001F5B1A6400065466 /* RealmRepo.swift */; };
+		37DD3C0B1F5B1A6400065466 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C011F5B1A6400065466 /* RealmRepresentable.swift */; };
+		37DD3C0C1F5B1A6400065466 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C011F5B1A6400065466 /* RealmRepresentable.swift */; };
+		37DD3C0D1F5B1A6400065466 /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C021F5B1A6400065466 /* RunLoopThreadScheduler.swift */; };
+		37DD3C0E1F5B1A6400065466 /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C021F5B1A6400065466 /* RunLoopThreadScheduler.swift */; };
+		37DD3C111F5B1AAC00065466 /* RMCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C101F5B1AAC00065466 /* RMCity.swift */; };
+		37DD3C121F5B1AAC00065466 /* RMCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C101F5B1AAC00065466 /* RMCity.swift */; };
+		37DD3C141F5B1BC500065466 /* SaveNewLatestCityUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C131F5B1BC500065466 /* SaveNewLatestCityUseCase.swift */; };
+		37DD3C151F5B1BC500065466 /* SaveNewLatestCityUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C131F5B1BC500065466 /* SaveNewLatestCityUseCase.swift */; };
 		56F95D87021E103EADFB3B90 /* Pods_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D88AAC2FB7970DC1AF843A /* Pods_WeatherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,11 +67,19 @@
 		37DD3BDF1F59DC9C00065466 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		37DD3BE21F59DCDE00065466 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		37DD3BE51F59DCED00065466 /* WeatherResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResult.swift; sourceTree = "<group>"; };
-		37DD3BEA1F5B0BEC00065466 /* GetLastestCities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLastestCities.swift; sourceTree = "<group>"; };
+		37DD3BEA1F5B0BEC00065466 /* GetLastestCitiesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLastestCitiesUseCase.swift; sourceTree = "<group>"; };
 		37DD3BED1F5B0DDE00065466 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		37DD3BF21F5B0F9D00065466 /* WebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		37DD3BF51F5B105700065466 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		37DD3BF81F5B175500065466 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		37DD3BFD1F5B1A6400065466 /* DomainConvertibleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
+		37DD3BFE1F5B1A6400065466 /* ObservableExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableExt.swift; sourceTree = "<group>"; };
+		37DD3BFF1F5B1A6400065466 /* RealmExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmExt.swift; sourceTree = "<group>"; };
+		37DD3C001F5B1A6400065466 /* RealmRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepo.swift; sourceTree = "<group>"; };
+		37DD3C011F5B1A6400065466 /* RealmRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		37DD3C021F5B1A6400065466 /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
+		37DD3C101F5B1AAC00065466 /* RMCity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCity.swift; sourceTree = "<group>"; };
+		37DD3C131F5B1BC500065466 /* SaveNewLatestCityUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveNewLatestCityUseCase.swift; sourceTree = "<group>"; };
 		A3CA7BACCDA32B1849795B72 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		B261A9ECA1C64910D04B2D47 /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BD48D605F5B9279E7AD792B8 /* Pods_WeatherAppLAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherAppLAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,8 +182,9 @@
 		37DD3BD51F59DBA100065466 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				37DD3C131F5B1BC500065466 /* SaveNewLatestCityUseCase.swift */,
+				37DD3BEA1F5B0BEC00065466 /* GetLastestCitiesUseCase.swift */,
 				37DD3BD91F59DC1A00065466 /* SearchWeatherUseCase.swift */,
-				37DD3BEA1F5B0BEC00065466 /* GetLastestCities.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -194,6 +219,9 @@
 		37DD3BDC1F59DC4B00065466 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				37DD3C001F5B1A6400065466 /* RealmRepo.swift */,
+				37DD3C0F1F5B1A6900065466 /* Conversion & Utils */,
+				37DD3C101F5B1AAC00065466 /* RMCity.swift */,
 			);
 			name = Realm;
 			sourceTree = "<group>";
@@ -262,6 +290,18 @@
 			children = (
 			);
 			name = Presenter;
+			sourceTree = "<group>";
+		};
+		37DD3C0F1F5B1A6900065466 /* Conversion & Utils */ = {
+			isa = PBXGroup;
+			children = (
+				37DD3BFD1F5B1A6400065466 /* DomainConvertibleType.swift */,
+				37DD3BFE1F5B1A6400065466 /* ObservableExt.swift */,
+				37DD3BFF1F5B1A6400065466 /* RealmExt.swift */,
+				37DD3C011F5B1A6400065466 /* RealmRepresentable.swift */,
+				37DD3C021F5B1A6400065466 /* RunLoopThreadScheduler.swift */,
+			);
+			name = "Conversion & Utils";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,16 +507,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37DD3C0C1F5B1A6400065466 /* RealmRepresentable.swift in Sources */,
+				37DD3C061F5B1A6400065466 /* ObservableExt.swift in Sources */,
 				37DD3BE71F59DCED00065466 /* WeatherResult.swift in Sources */,
+				37DD3C151F5B1BC500065466 /* SaveNewLatestCityUseCase.swift in Sources */,
 				37DD3BEF1F5B0DDE00065466 /* SearchViewController.swift in Sources */,
+				37DD3C121F5B1AAC00065466 /* RMCity.swift in Sources */,
 				37DD3BB41F59DAA800065466 /* AppDelegate.swift in Sources */,
-				37DD3BEC1F5B0BEC00065466 /* GetLastestCities.swift in Sources */,
+				37DD3BEC1F5B0BEC00065466 /* GetLastestCitiesUseCase.swift in Sources */,
 				37DD3BDB1F59DC1A00065466 /* SearchWeatherUseCase.swift in Sources */,
 				37DD3BFA1F5B175500065466 /* ResultViewController.swift in Sources */,
 				37DD3BE41F59DCDE00065466 /* Location.swift in Sources */,
 				37DD3BF41F5B0F9D00065466 /* WebViewViewController.swift in Sources */,
 				37DD3BE11F59DC9C00065466 /* City.swift in Sources */,
 				37DD3BF71F5B105700065466 /* Constants.swift in Sources */,
+				37DD3C041F5B1A6400065466 /* DomainConvertibleType.swift in Sources */,
+				37DD3C0E1F5B1A6400065466 /* RunLoopThreadScheduler.swift in Sources */,
+				37DD3C081F5B1A6400065466 /* RealmExt.swift in Sources */,
+				37DD3C0A1F5B1A6400065466 /* RealmRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,16 +532,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37DD3C0B1F5B1A6400065466 /* RealmRepresentable.swift in Sources */,
+				37DD3C051F5B1A6400065466 /* ObservableExt.swift in Sources */,
 				37DD3BE61F59DCED00065466 /* WeatherResult.swift in Sources */,
+				37DD3C141F5B1BC500065466 /* SaveNewLatestCityUseCase.swift in Sources */,
 				37DD3BEE1F5B0DDE00065466 /* SearchViewController.swift in Sources */,
+				37DD3C111F5B1AAC00065466 /* RMCity.swift in Sources */,
 				37DD3BC81F59DB6C00065466 /* AppDelegate.swift in Sources */,
-				37DD3BEB1F5B0BEC00065466 /* GetLastestCities.swift in Sources */,
+				37DD3BEB1F5B0BEC00065466 /* GetLastestCitiesUseCase.swift in Sources */,
 				37DD3BDA1F59DC1A00065466 /* SearchWeatherUseCase.swift in Sources */,
 				37DD3BF91F5B175500065466 /* ResultViewController.swift in Sources */,
 				37DD3BE31F59DCDE00065466 /* Location.swift in Sources */,
 				37DD3BF31F5B0F9D00065466 /* WebViewViewController.swift in Sources */,
 				37DD3BE01F59DC9C00065466 /* City.swift in Sources */,
 				37DD3BF61F5B105700065466 /* Constants.swift in Sources */,
+				37DD3C031F5B1A6400065466 /* DomainConvertibleType.swift in Sources */,
+				37DD3C0D1F5B1A6400065466 /* RunLoopThreadScheduler.swift in Sources */,
+				37DD3C071F5B1A6400065466 /* RealmExt.swift in Sources */,
+				37DD3C091F5B1A6400065466 /* RealmRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
