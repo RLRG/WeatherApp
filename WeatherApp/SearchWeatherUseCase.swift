@@ -1,5 +1,5 @@
 //
-//  SearchWeatherForecastUseCase.swift
+//  SearchWeatherUseCase.swift
 //  WeatherApp
 //
 //  Created by Rodrigo López-Romero Guijarro on 01/09/2017.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-class SearchWeatherForecastUseCase {
+class SearchWeatherUseCase {
     
 }
