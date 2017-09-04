@@ -7,7 +7,17 @@
 //
 
 import Foundation
+import RxSwift
 
 class GetLatestCitiesUseCase {
     
+    private let repository: AbstractRepository<City>
+    
+    init(repository: AbstractRepository<City>) {
+        self.repository = repository
+    }
+    
+    func getLatestCitiesInDB() -> Observable<[City]> {
+        return repository.queryAll()
+    }
 }
