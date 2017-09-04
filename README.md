@@ -41,7 +41,7 @@ This paragraph includes all the resources used to create this app project, inclu
 ### APIs
 | Framework | Description |
 | --- | --- |
-| TO DECIDE | It is used to retrieve the information about the weather. |
+| [OpenWeather](https://openweathermap.org) | It is used to retrieve the information about the weather. |
 ### Other information resources
 | Resource | Description |
 | --- | --- |

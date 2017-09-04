@@ -7,7 +7,16 @@
 //
 
 import Foundation
+import RxSwift
 
-class SearchWeatherUseCase {
+final class SearchWeatherUseCase {
+    private let network: WeatherResultNetwork
     
+    init(network: WeatherResultNetwork) {
+        self.network = network
+    }
+    
+    func getWeatherResult(withName name: String? = "", withLat lat: Double = 0, withLon lon: Double = 0) -> Observable<WeatherResult> {
+        return network.getWeatherResult(withName: name, withLat: lat, withLon: lon)
+    }
 }
