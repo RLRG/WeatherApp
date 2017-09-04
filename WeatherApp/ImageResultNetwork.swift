@@ -18,8 +18,7 @@ class ImageResultNetwork {
     }
     
     func getImageUrl(withName name: String?, withLat lat: Double, withLon lon: Double) -> Observable<ImageResult> {
-        // TODO: Take into account the name of the city and/or the lat/lon values.
-        return network.getRequest("?\(flickrURLFromParameters(Constants.methodParameters))")
+        return network.getRequest("?\(flickrURLFromParameters(Constants.methodParameters))&lat=\(lat)&lon=\(lon)&radius=30&radius_units=km")
     }
     
     private func flickrURLFromParameters(_ parameters: [String:String]) -> String {

@@ -101,8 +101,8 @@ class SearchPresenter {
     
     // MARK: - Flickr images
     
-    func getImageUrl() {
-        getImageUrlUseCase.getImageUrl().asObservable()
+    func getImageUrl(withName name: String = "", withLat lat: Double = 0, withLon lon: Double = 0) {
+        getImageUrlUseCase.getImageUrl(withName: name, withLat: lat, withLon: lon).asObservable()
             .subscribe(
                 onNext: { (photo_url) in
                     self.imageResult.value = photo_url

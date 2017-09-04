@@ -181,7 +181,7 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
             loadingSpinner.startAnimating()
             disableSuggestionsListTextField()
             presenter.searchWeatherForCurrentLocation(withLat: lat, withLon: lon)
-            presenter.getImageUrl()
+            presenter.getImageUrl(withName: "", withLat: lat, withLon: lon)
         } else {
             AlertsManager.alert(caller: self, message: "Please, check that you have allowed your location services and try again", title: "Operation error") {
             }

@@ -76,7 +76,7 @@ struct Constants {
         contentTypeParam: contentType,
         mediaParam: media,
         hasGeoParam: hasGeo,
-        geoContextParam: geoContext,
+        //geoContextParam: geoContext,
         extrasParam: extras,
         formatParam: format,
         perPageParam: perPage,
