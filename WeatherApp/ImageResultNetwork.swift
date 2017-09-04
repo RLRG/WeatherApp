@@ -37,10 +37,10 @@ class ImageResultNetwork {
 extension ImageResult: ImmutableMappable {
     // JSON -> Object
     public init(map: Map) throws {
-        if let photos = map.JSON["photos"] as! [String:Any]?,
-            let photo = photos["photo"] as! [[String:Any]]?,
+        if let photos = map.JSON["photos"] as! [String:Any]?, // swiftlint:disable:this force_cast
+            let photo = photos["photo"] as! [[String:Any]]?, // swiftlint:disable:this force_cast
             let url_m = photo[0]["url_m"] {
-            url = url_m as! String
+            url = url_m as! String // swiftlint:disable:this force_cast
         } else {
             url = ""
         }

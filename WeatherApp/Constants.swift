@@ -25,7 +25,7 @@ struct Constants {
     // MARK: - Flickr API
     
     /* Example of API call
-        https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=6d3a9ee3ce484b53f9627d23792ef987&tags=nature%2Cweather%2Cbuilding%2Csun%2Crain%2Cclouds%2Csky%2Csunset%2Csunrise%2Cnight%2Cclouds%2Ctree&accuracy=11&safe_search=1&content_type=1&media=photos&has_geo=1&geo_context=2&extras=url_m&format=json */
+        https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=6d3a9ee3ce484b53f9627d23792ef987&tags=nature%2Cweather%2Cbuilding%2Csun%2Crain%2Cclouds%2Csky%2Csunset%2Csunrise%2Cnight%2Cclouds%2Ctree&accuracy=11&safe_search=1&content_type=1&media=photos&has_geo=1&geo_context=2&extras=url_m&format=json */ // swiftlint:disable:this line_length
     static let flickrAPI = "https://api.flickr.com/services/rest"
     
     static let APIKeyParam = "api_key"

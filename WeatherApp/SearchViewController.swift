@@ -28,6 +28,8 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
     
     var locationManager: CLLocationManager?
     var lastLocation: CLLocation?
+    
+    let loadingSpinner = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,11 +62,19 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
         
         // Weather & ImageURL results
         setupWeatherAndImageURLObservers()
+        
+        // UIActivityIndicator
+        loadingSpinner.color = UIColor.purple
+        loadingSpinner.hidesWhenStopped = true
+        loadingSpinner.center = CGPoint(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height/2 - (self.navigationController?.navigationBar.bounds.height)!)
+        loadingSpinner.accessibilityIdentifier = "loadingIndicator"
+        self.view.addSubview(loadingSpinner)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+        cityTextBox.text = ""
         enableSuggestionsListTextField()
     }
     
@@ -106,7 +116,7 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
     func setupCitiesDataObserver() {
         presenter.latestCities.asObservable()
             .subscribe({ _ in
-                var cityArray: Array<SearchTextFieldItem> = Array<SearchTextFieldItem>()
+                var cityArray: [SearchTextFieldItem] = [SearchTextFieldItem]()
                 for city in self.presenter.latestCities.value {
                     let searchTextFieldItem = SearchTextFieldItem(title: city.name)
                     cityArray.append(searchTextFieldItem)
@@ -128,11 +138,13 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
             }.subscribe({ _ in
                 if ( (self.presenter.weatherResult.value.location.lat != 0 || self.presenter.weatherResult.value.location.lon != 0) && (self.presenter.imageResult.value.url != "")) {
                     DispatchQueue.main.async {
+                        
+                        self.loadingSpinner.stopAnimating()
+                        
                         let resultViewController = UIStoryboard(name: "Main", bundle: nil)
                             .instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController // swiftlint:disable:this force_cast
                         resultViewController.resultObject = self.presenter.weatherResult.value
                         resultViewController.resultImage = self.presenter.imageResult.value
-                        // TODO: Include loading activity indicator.
                         self.navigationController?.pushViewController(resultViewController, animated: true)
                     }
                 }
@@ -152,6 +164,7 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
     
     @IBAction func searchWeatherForCity(_ sender: Any) {
         if let cityName = cityTextBox.text, cityName != "" {
+            loadingSpinner.startAnimating()
             disableSuggestionsListTextField()
             presenter.saveCity(withName: cityName)
             presenter.searchWeather(forCityName: cityName)
@@ -165,6 +178,7 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
     @IBAction func searchWeatherForCurrentLocation(_ sender: Any) {
         if let lat = lastLocation?.coordinate.latitude,
             let lon = lastLocation?.coordinate.longitude {
+            loadingSpinner.startAnimating()
             disableSuggestionsListTextField()
             presenter.searchWeatherForCurrentLocation(withLat: lat, withLon: lon)
             presenter.getImageUrl()
