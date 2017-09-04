@@ -41,26 +41,24 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WeatherApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdA-RC-58Q">
                                 <rect key="frame" x="60" y="72" width="255" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zl-Tz-3jU">
-                                <rect key="frame" x="16" y="230" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zl-Tz-3jU" customClass="SearchTextField" customModule="SearchTextField">
+                                <rect key="frame" x="16" y="199" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Uu-VQ-bnC">
-                                <rect key="frame" x="128" y="268" width="118" height="30"/>
+                                <rect key="frame" x="128" y="237" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search city !"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSB-6L-xNS">
-                                <rect key="frame" x="78" y="306" width="219" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Search current location"/>
+                                <connections>
+                                    <action selector="searchWeatherForCity:" destination="dKB-qS-1Jv" eventType="touchUpInside" id="Y84-AB-F5u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlQ-XJ-LsW">
                                 <rect key="frame" x="134" y="394" width="106" height="30"/>
@@ -78,11 +76,20 @@
                                     <action selector="openFLEX:" destination="dKB-qS-1Jv" eventType="touchUpInside" id="QTy-9v-Kt5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSB-6L-xNS">
+                                <rect key="frame" x="78" y="275" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Search current location"/>
+                                <connections>
+                                    <action selector="searchWeatherForCurrentLocation:" destination="dKB-qS-1Jv" eventType="touchUpInside" id="QYR-je-Neb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="2cH-fX-Few"/>
                     <connections>
+                        <outlet property="cityTextBox" destination="2zl-Tz-3jU" id="zMj-Uu-4Ve"/>
                         <outlet property="debugButton" destination="X4E-mC-bAw" id="buC-Kd-LfJ"/>
                     </connections>
                 </viewController>
@@ -102,32 +109,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t68-82-ele">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="CityName" id="lEt-Lr-nof"/>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s99-nF-MHc">
-                                <rect key="frame" x="122" y="572" width="131" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="NEW SEARCH !"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ltt-Sl-HeF">
-                                <rect key="frame" x="16" y="84" width="343" height="211"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="45 ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiP-D6-0KC">
-                                <rect key="frame" x="61" y="381" width="252" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="60"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2cA-ss-pT1">
+                                <rect key="frame" x="24" y="36" width="327" height="615"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CityName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fu5-dR-YOV">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="46"/>
+                                        <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Ltt-Sl-HeF">
+                                        <rect key="frame" x="0.0" y="56" width="327" height="349"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y04-0j-EWq">
+                                        <rect key="frame" x="0.0" y="415" width="327" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="37O-Su-xTG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45 ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiP-D6-0KC">
+                                        <rect key="frame" x="0.0" y="500" width="327" height="69"/>
+                                        <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s99-nF-MHc">
+                                        <rect key="frame" x="0.0" y="579" width="327" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="NEW SEARCH !"/>
+                                        <connections>
+                                            <action selector="newSearchTapped:" destination="Igu-95-nce" eventType="touchUpInside" id="d0f-I2-FJ7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="2cA-ss-pT1" secondAttribute="trailing" constant="8" id="FGC-hC-NiU"/>
+                            <constraint firstItem="xUc-Aj-B7k" firstAttribute="top" secondItem="2cA-ss-pT1" secondAttribute="bottom" constant="16" id="PXl-dy-HH9"/>
+                            <constraint firstItem="2cA-ss-pT1" firstAttribute="leading" secondItem="oPJ-6x-1ks" secondAttribute="leadingMargin" constant="8" id="abh-XB-PY2"/>
+                            <constraint firstItem="2cA-ss-pT1" firstAttribute="top" secondItem="x9m-ba-s3B" secondAttribute="bottom" constant="16" id="fl8-WV-c6G"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="Fu5-dR-YOV" id="jIm-2q-0xT"/>
+                        <outlet property="imageIconView" destination="y04-0j-EWq" id="fbX-Kt-G2E"/>
+                        <outlet property="imageView" destination="Ltt-Sl-HeF" id="Yid-OY-ekj"/>
+                        <outlet property="tempLabel" destination="fiP-D6-0KC" id="PGX-t3-urX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9L5-PL-1xb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

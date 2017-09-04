@@ -13,5 +13,32 @@ class ResultViewController : UIViewController {
     
     // MARK: Properties & Initialization
     
+    var resultObject: WeatherResult!
+    
+    @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageIconView: UIImageView!
+    @IBOutlet weak var tempLabel: UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+        
+        cityNameLabel.text = resultObject.city.name
+        //imageView.image = UIImage(named: resultObject.weatherIcon)
+        imageIconView.image = UIImage(named: resultObject.weatherIcon)
+        tempLabel.text = "\(resultObject.temperature) ºC"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func newSearchTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
 }
