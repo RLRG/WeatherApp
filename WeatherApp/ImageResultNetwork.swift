@@ -38,8 +38,8 @@ extension ImageResult: ImmutableMappable {
     // JSON -> Object
     public init(map: Map) throws {
         if let photos = map.JSON["photos"] as! [String:Any]?,
-            let photo = photos["photo"] as! [String:Any]?,
-            let url_m = photo["url_m"] {
+            let photo = photos["photo"] as! [[String:Any]]?,
+            let url_m = photo[0]["url_m"] {
             url = url_m as! String
         } else {
             url = ""

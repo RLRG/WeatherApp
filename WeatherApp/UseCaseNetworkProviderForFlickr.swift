@@ -15,7 +15,7 @@ class UseCaseNetworkProviderForFlickr {
         networkProvider = NetworkProviderForFlickr()
     }
     
-    func makeGetWeatherResult() -> GetImageUrlUseCase {
+    func makeGetImageResult() -> GetImageUrlUseCase {
         return GetImageUrlUseCase(network: networkProvider.makeImageResultNetwork())
     }
     

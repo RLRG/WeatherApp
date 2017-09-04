@@ -11,6 +11,8 @@ import RxSwift
 
 class SearchPresenter {
     
+    // MARK: - Properties & Initialization
+    
     var searchViewControllerImplementation: SearchProtocol!
     let saveNewLatestCityUseCase: SaveNewLatestCityUseCase
     let getLatestCitiesUseCase: GetLatestCitiesUseCase
@@ -18,6 +20,7 @@ class SearchPresenter {
     let getImageUrlUseCase: GetImageUrlUseCase
     var latestCities: Variable<[City]> = Variable([])
     var weatherResult: Variable<WeatherResult> = Variable(WeatherResult(temperature: 0, weatherIcon: "", city: City(name: "", timeRequested: Date()), location: Location(lat: 0, lon: 0)))
+    var imageResult: Variable<ImageResult> = Variable(ImageResult(url: ""))
     let disposeBag = DisposeBag()
     
     init (saveNewLatestCityUseCase: SaveNewLatestCityUseCase, getLatestCitiesUseCase: GetLatestCitiesUseCase, searchWeatherUseCase: SearchWeatherUseCase, getImageUrlUseCase: GetImageUrlUseCase) {
@@ -26,6 +29,8 @@ class SearchPresenter {
         self.searchWeatherUseCase = searchWeatherUseCase
         self.getImageUrlUseCase = getImageUrlUseCase
     }
+    
+    // MARK: - Cities
     
     func saveCity(withName name: String) {
         saveNewLatestCityUseCase.saveCityToDB(cityName: name, date: Date())
@@ -55,6 +60,8 @@ class SearchPresenter {
                     #endif
             }).disposed(by: disposeBag)
     }
+    
+    // MARK: - Weather
     
     func searchWeather(forCityName name: String) {
         searchWeatherUseCase.getWeatherResult(withName: name).asObservable()
@@ -88,6 +95,26 @@ class SearchPresenter {
                 onCompleted: {
                     #if DEBUG
                         print("onCompleted requesting weather info.")
+                    #endif
+            }).disposed(by: disposeBag)
+    }
+    
+    // MARK: - Flickr images
+    
+    func getImageUrl() {
+        getImageUrlUseCase.getImageUrl().asObservable()
+            .subscribe(
+                onNext: { (photo_url) in
+                    self.imageResult.value = photo_url
+            },
+                onError: { (error) in
+                    #if DEBUG
+                        print("Error requesting image url.")
+                    #endif
+            },
+                onCompleted: {
+                    #if DEBUG
+                        print("onCompleted requesting image url.")
                     #endif
             }).disposed(by: disposeBag)
     }

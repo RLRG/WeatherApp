@@ -60,6 +60,9 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
         
         // Weather results
         setupWeatherObserver()
+        
+        // Image URL result
+        setupImageURLObserver()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -101,6 +104,8 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
         cityTextBox.theme.cellHeight = 50
     }
     
+    // MARK: - Data Observers
+    
     func setupCitiesDataObserver() {
         presenter.latestCities.asObservable()
             .subscribe({ _ in
@@ -131,6 +136,19 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
             .disposed(by: disposeBag)
     }
     
+    func setupImageURLObserver() {
+        presenter.imageResult.asObservable()
+            .subscribe({_ in
+                if (self.presenter.imageResult.value.url != "") {
+                    DispatchQueue.main.async {
+                        print("URL_M = \(self.presenter.imageResult.value.url)")
+                    }
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    
     // MARK: - UITextFieldDelegate methods
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -145,6 +163,7 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
             disableSuggestionsListTextField()
             presenter.saveCity(withName: cityName)
             presenter.searchWeather(forCityName: cityName)
+            presenter.getImageUrl()
         } else {
             AlertsManager.alert(caller: self, message: "Please, provide a city name to request the weather information and try again", title: "No city entered") {
             }

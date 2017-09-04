@@ -35,7 +35,7 @@ struct Constants {
     static let method = "flickr.photos.search"
     
     static let tagsParam = "tags"
-    static let tagsValues = "nature%2Cweather%2Cbuilding%2Csun%2Crain%2Cclouds%2Csky%2Csunset%2Csunrise%2Cnight%2Cclouds%2Ctree"
+    static let tagsValues = "nature,weather,building,sun,rain,cloud,sky,sunset,sunrise,night,clouds,tree"
     
     static let accuracyParam = "accuracy"
     static let accuracy = "11"
@@ -64,6 +64,9 @@ struct Constants {
     static let perPageParam = "per_page"
     static let perPage = "1"
     
+    static let noJsonCallBack = "nojsoncallback"
+    static let noJsonValue = "1"
+    
     static let methodParameters = [
         methodParam: method,
         APIKeyParam: APIKey,
@@ -76,6 +79,7 @@ struct Constants {
         geoContextParam: geoContext,
         extrasParam: extras,
         formatParam: format,
-        perPageParam: perPage
+        perPageParam: perPage,
+        noJsonCallBack: noJsonValue
     ]
 }

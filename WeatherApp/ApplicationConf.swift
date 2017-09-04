@@ -25,7 +25,7 @@ final class Application {
         let useCaseNetworkProvider = UseCaseNetworkProvider()
         let searchWeatherUseCase = useCaseNetworkProvider.makeGetWeatherResult()
         let useCaseNetworkProviderForFlickr = UseCaseNetworkProviderForFlickr()
-        let getImageUrlUseCase = useCaseNetworkProviderForFlickr.makeGetWeatherResult()
+        let getImageUrlUseCase = useCaseNetworkProviderForFlickr.makeGetImageResult()
         let presenter = SearchPresenter(saveNewLatestCityUseCase: saveNewLatestCityUseCase, getLatestCitiesUseCase: getLatestCitiesUseCase, searchWeatherUseCase: searchWeatherUseCase, getImageUrlUseCase: getImageUrlUseCase)
         searchVC.presenter = presenter
         presenter.searchViewControllerImplementation = searchVC
