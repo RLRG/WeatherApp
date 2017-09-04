@@ -38,14 +38,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="O6s-JK-Kd4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WeatherApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdA-RC-58Q">
                                 <rect key="frame" x="60" y="72" width="255" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zl-Tz-3jU" customClass="SearchTextField" customModule="SearchTextField">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a city name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zl-Tz-3jU" customClass="SearchTextField" customModule="SearchTextField">
                                 <rect key="frame" x="16" y="199" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -86,6 +89,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aEw-fC-kgl" firstAttribute="top" secondItem="O6s-JK-Kd4" secondAttribute="bottom" id="7Zn-wJ-hLN"/>
+                            <constraint firstItem="O6s-JK-Kd4" firstAttribute="leading" secondItem="E26-pI-ZPY" secondAttribute="leadingMargin" constant="-16" id="Jcr-AG-4S7"/>
+                            <constraint firstItem="O6s-JK-Kd4" firstAttribute="trailing" secondItem="E26-pI-ZPY" secondAttribute="trailingMargin" constant="16" id="joo-al-VT4"/>
+                            <constraint firstItem="O6s-JK-Kd4" firstAttribute="top" secondItem="E26-pI-ZPY" secondAttribute="topMargin" id="t18-d5-OLj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2cH-fX-Few"/>
                     <connections>
@@ -109,6 +118,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ch7-18-p0G">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2cA-ss-pT1">
                                 <rect key="frame" x="24" y="36" width="327" height="615"/>
                                 <subviews>
@@ -150,6 +162,10 @@
                             <constraint firstItem="xUc-Aj-B7k" firstAttribute="top" secondItem="2cA-ss-pT1" secondAttribute="bottom" constant="16" id="PXl-dy-HH9"/>
                             <constraint firstItem="2cA-ss-pT1" firstAttribute="leading" secondItem="oPJ-6x-1ks" secondAttribute="leadingMargin" constant="8" id="abh-XB-PY2"/>
                             <constraint firstItem="2cA-ss-pT1" firstAttribute="top" secondItem="x9m-ba-s3B" secondAttribute="bottom" constant="16" id="fl8-WV-c6G"/>
+                            <constraint firstItem="Ch7-18-p0G" firstAttribute="trailing" secondItem="oPJ-6x-1ks" secondAttribute="trailingMargin" constant="16" id="m1U-O4-0Un"/>
+                            <constraint firstItem="Ch7-18-p0G" firstAttribute="top" secondItem="oPJ-6x-1ks" secondAttribute="topMargin" id="m9e-EZ-9uN"/>
+                            <constraint firstItem="Ch7-18-p0G" firstAttribute="leading" secondItem="oPJ-6x-1ks" secondAttribute="leadingMargin" constant="-16" id="pBc-wi-pZ2"/>
+                            <constraint firstItem="xUc-Aj-B7k" firstAttribute="top" secondItem="Ch7-18-p0G" secondAttribute="bottom" id="r1a-6q-ye0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -197,4 +213,7 @@
             <point key="canvasLocation" x="453.60000000000002" y="507.79610194902551"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launchImage" width="480" height="640"/>
+    </resources>
 </document>

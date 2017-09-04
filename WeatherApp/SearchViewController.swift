@@ -167,6 +167,7 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
             let lon = lastLocation?.coordinate.longitude {
             disableSuggestionsListTextField()
             presenter.searchWeatherForCurrentLocation(withLat: lat, withLon: lon)
+            presenter.getImageUrl()
         } else {
             AlertsManager.alert(caller: self, message: "Please, check that you have allowed your location services and try again", title: "Operation error") {
             }
