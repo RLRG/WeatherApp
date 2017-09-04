@@ -168,7 +168,29 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
             disableSuggestionsListTextField()
             presenter.saveCity(withName: cityName)
             presenter.searchWeather(forCityName: cityName)
-            presenter.getImageUrl()
+            
+            let geocoder = CLGeocoder()
+            geocoder.geocodeAddressString(cityName) { (placemarks, error) -> Void in
+                if let error = error {
+                    print("Unable to Forward Geocode Address (\(error))")
+                    self.presenter.getImageUrl()
+                } else {
+                    var location: CLLocation?
+                    
+                    if let placemarks = placemarks, !placemarks.isEmpty {
+                        location = placemarks.first?.location
+                    }
+                    
+                    if let location = location {
+                        let coordinate = location.coordinate
+                        self.presenter.getImageUrl(withName: "", withLat: coordinate.latitude, withLon: coordinate.longitude)
+                    } else {
+                        print("No Matching Location Found")
+                        self.presenter.getImageUrl()
+                    }
+                }
+            }
+            
         } else {
             AlertsManager.alert(caller: self, message: "Please, provide a city name to request the weather information and try again", title: "No city entered") {
             }
