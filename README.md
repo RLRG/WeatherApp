@@ -37,6 +37,7 @@ This paragraph includes all the resources used to create this app project, inclu
 | [Alamofire](https://github.com/Alamofire/Alamofire) | Elegant HTTP Networking in Swift. |
 | [Travis CI](https://travis-ci.org/) | Continuous Integration used to build the project automatically. |
 | [Realm](https://github.com/realm/realm-cocoa) | Mobile database used to persist data of the app. |
+| [SearchTextField](https://github.com/apasccon/SearchTextField) | Adding the suggestions list to the main UITextView. |
 | Other | Other frameworks related to the ones already mentioned such as: RxAlamofire, ObjectMapper, AlamofireObjectMapper, RxRealm, QueryKit (see PodFile of the project) |
 ### APIs
 | Framework | Description |
