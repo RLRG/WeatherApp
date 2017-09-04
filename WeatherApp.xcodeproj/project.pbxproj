@@ -50,6 +50,24 @@
 		37DD3C121F5B1AAC00065466 /* RMCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C101F5B1AAC00065466 /* RMCity.swift */; };
 		37DD3C141F5B1BC500065466 /* SaveNewLatestCityUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C131F5B1BC500065466 /* SaveNewLatestCityUseCase.swift */; };
 		37DD3C151F5B1BC500065466 /* SaveNewLatestCityUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C131F5B1BC500065466 /* SaveNewLatestCityUseCase.swift */; };
+		37DD3C191F5C994300065466 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C171F5C994300065466 /* Network.swift */; };
+		37DD3C1A1F5C994300065466 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C171F5C994300065466 /* Network.swift */; };
+		37DD3C1B1F5C994300065466 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C181F5C994300065466 /* NetworkProvider.swift */; };
+		37DD3C1C1F5C994300065466 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C181F5C994300065466 /* NetworkProvider.swift */; };
+		37DD3C1E1F5C99C800065466 /* UseCaseNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C1D1F5C99C800065466 /* UseCaseNetworkProvider.swift */; };
+		37DD3C1F1F5C99C800065466 /* UseCaseNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C1D1F5C99C800065466 /* UseCaseNetworkProvider.swift */; };
+		37DD3C211F5C9A4E00065466 /* WeatherResultNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C201F5C9A4E00065466 /* WeatherResultNetwork.swift */; };
+		37DD3C221F5C9A4E00065466 /* WeatherResultNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C201F5C9A4E00065466 /* WeatherResultNetwork.swift */; };
+		37DD3C241F5CAAF800065466 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C231F5CAAF800065466 /* UIViewControllerExt.swift */; };
+		37DD3C251F5CAAF800065466 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C231F5CAAF800065466 /* UIViewControllerExt.swift */; };
+		37DD3C271F5CAC7200065466 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C261F5CAC7200065466 /* SearchPresenter.swift */; };
+		37DD3C281F5CAC7200065466 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C261F5CAC7200065466 /* SearchPresenter.swift */; };
+		37DD3C2A1F5CAF3000065466 /* ApplicationConf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C291F5CAF3000065466 /* ApplicationConf.swift */; };
+		37DD3C2B1F5CAF3000065466 /* ApplicationConf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C291F5CAF3000065466 /* ApplicationConf.swift */; };
+		37DD3C2D1F5D34C200065466 /* SearchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C2C1F5D34C200065466 /* SearchProtocol.swift */; };
+		37DD3C2E1F5D34C200065466 /* SearchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C2C1F5D34C200065466 /* SearchProtocol.swift */; };
+		37DD3C301F5D358C00065466 /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C2F1F5D358C00065466 /* AlertsManager.swift */; };
+		37DD3C311F5D358C00065466 /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C2F1F5D358C00065466 /* AlertsManager.swift */; };
 		56F95D87021E103EADFB3B90 /* Pods_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D88AAC2FB7970DC1AF843A /* Pods_WeatherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +98,15 @@
 		37DD3C021F5B1A6400065466 /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
 		37DD3C101F5B1AAC00065466 /* RMCity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCity.swift; sourceTree = "<group>"; };
 		37DD3C131F5B1BC500065466 /* SaveNewLatestCityUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveNewLatestCityUseCase.swift; sourceTree = "<group>"; };
+		37DD3C171F5C994300065466 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		37DD3C181F5C994300065466 /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		37DD3C1D1F5C99C800065466 /* UseCaseNetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseNetworkProvider.swift; sourceTree = "<group>"; };
+		37DD3C201F5C9A4E00065466 /* WeatherResultNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResultNetwork.swift; sourceTree = "<group>"; };
+		37DD3C231F5CAAF800065466 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		37DD3C261F5CAC7200065466 /* SearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		37DD3C291F5CAF3000065466 /* ApplicationConf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationConf.swift; sourceTree = "<group>"; };
+		37DD3C2C1F5D34C200065466 /* SearchProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProtocol.swift; sourceTree = "<group>"; };
+		37DD3C2F1F5D358C00065466 /* AlertsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsManager.swift; sourceTree = "<group>"; };
 		A3CA7BACCDA32B1849795B72 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		B261A9ECA1C64910D04B2D47 /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BD48D605F5B9279E7AD792B8 /* Pods_WeatherAppLAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherAppLAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +178,7 @@
 			children = (
 				37DD3BD31F59DB8B00065466 /* Application */,
 				37DD3BD41F59DB9800065466 /* Modules */,
+				37DD3C161F5C992F00065466 /* Network */,
 				37DD3BD51F59DBA100065466 /* Interactor */,
 				37DD3BD61F59DBB500065466 /* Entities */,
 				37DD3BD71F59DBBE00065466 /* Utils */,
@@ -163,9 +191,10 @@
 			children = (
 				37DD3BD81F59DBE700065466 /* Configuration */,
 				37DD3BB31F59DAA800065466 /* AppDelegate.swift */,
+				37DD3C291F5CAF3000065466 /* ApplicationConf.swift */,
 				37DD3BB71F59DAA800065466 /* Main.storyboard */,
-				37DD3BBA1F59DAA800065466 /* Assets.xcassets */,
 				37DD3BBC1F59DAA800065466 /* LaunchScreen.storyboard */,
+				37DD3BBA1F59DAA800065466 /* Assets.xcassets */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -203,6 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				37DD3BF51F5B105700065466 /* Constants.swift */,
+				37DD3C231F5CAAF800065466 /* UIViewControllerExt.swift */,
+				37DD3C2F1F5D358C00065466 /* AlertsManager.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -239,6 +270,7 @@
 		37DD3BDE1F59DC7200065466 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				37DD3C201F5C9A4E00065466 /* WeatherResultNetwork.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -256,7 +288,6 @@
 			isa = PBXGroup;
 			children = (
 				37DD3BFB1F5B175900065466 /* View */,
-				37DD3BFC1F5B176B00065466 /* Presenter */,
 			);
 			name = resultScreen;
 			sourceTree = "<group>";
@@ -273,6 +304,8 @@
 		37DD3BF11F5B0E6100065466 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				37DD3C2C1F5D34C200065466 /* SearchProtocol.swift */,
+				37DD3C261F5CAC7200065466 /* SearchPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -285,13 +318,6 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		37DD3BFC1F5B176B00065466 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Presenter;
-			sourceTree = "<group>";
-		};
 		37DD3C0F1F5B1A6900065466 /* Conversion & Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +328,16 @@
 				37DD3C021F5B1A6400065466 /* RunLoopThreadScheduler.swift */,
 			);
 			name = "Conversion & Utils";
+			sourceTree = "<group>";
+		};
+		37DD3C161F5C992F00065466 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				37DD3C1D1F5C99C800065466 /* UseCaseNetworkProvider.swift */,
+				37DD3C171F5C994300065466 /* Network.swift */,
+				37DD3C181F5C994300065466 /* NetworkProvider.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,14 +551,23 @@
 				37DD3C121F5B1AAC00065466 /* RMCity.swift in Sources */,
 				37DD3BB41F59DAA800065466 /* AppDelegate.swift in Sources */,
 				37DD3BEC1F5B0BEC00065466 /* GetLastestCitiesUseCase.swift in Sources */,
+				37DD3C251F5CAAF800065466 /* UIViewControllerExt.swift in Sources */,
+				37DD3C221F5C9A4E00065466 /* WeatherResultNetwork.swift in Sources */,
 				37DD3BDB1F59DC1A00065466 /* SearchWeatherUseCase.swift in Sources */,
+				37DD3C1C1F5C994300065466 /* NetworkProvider.swift in Sources */,
 				37DD3BFA1F5B175500065466 /* ResultViewController.swift in Sources */,
 				37DD3BE41F59DCDE00065466 /* Location.swift in Sources */,
+				37DD3C311F5D358C00065466 /* AlertsManager.swift in Sources */,
+				37DD3C2B1F5CAF3000065466 /* ApplicationConf.swift in Sources */,
+				37DD3C281F5CAC7200065466 /* SearchPresenter.swift in Sources */,
 				37DD3BF41F5B0F9D00065466 /* WebViewViewController.swift in Sources */,
+				37DD3C1A1F5C994300065466 /* Network.swift in Sources */,
+				37DD3C1F1F5C99C800065466 /* UseCaseNetworkProvider.swift in Sources */,
 				37DD3BE11F59DC9C00065466 /* City.swift in Sources */,
 				37DD3BF71F5B105700065466 /* Constants.swift in Sources */,
 				37DD3C041F5B1A6400065466 /* DomainConvertibleType.swift in Sources */,
 				37DD3C0E1F5B1A6400065466 /* RunLoopThreadScheduler.swift in Sources */,
+				37DD3C2E1F5D34C200065466 /* SearchProtocol.swift in Sources */,
 				37DD3C081F5B1A6400065466 /* RealmExt.swift in Sources */,
 				37DD3C0A1F5B1A6400065466 /* RealmRepo.swift in Sources */,
 			);
@@ -540,14 +585,23 @@
 				37DD3C111F5B1AAC00065466 /* RMCity.swift in Sources */,
 				37DD3BC81F59DB6C00065466 /* AppDelegate.swift in Sources */,
 				37DD3BEB1F5B0BEC00065466 /* GetLastestCitiesUseCase.swift in Sources */,
+				37DD3C241F5CAAF800065466 /* UIViewControllerExt.swift in Sources */,
+				37DD3C211F5C9A4E00065466 /* WeatherResultNetwork.swift in Sources */,
 				37DD3BDA1F59DC1A00065466 /* SearchWeatherUseCase.swift in Sources */,
+				37DD3C1B1F5C994300065466 /* NetworkProvider.swift in Sources */,
 				37DD3BF91F5B175500065466 /* ResultViewController.swift in Sources */,
 				37DD3BE31F59DCDE00065466 /* Location.swift in Sources */,
+				37DD3C301F5D358C00065466 /* AlertsManager.swift in Sources */,
+				37DD3C2A1F5CAF3000065466 /* ApplicationConf.swift in Sources */,
+				37DD3C271F5CAC7200065466 /* SearchPresenter.swift in Sources */,
 				37DD3BF31F5B0F9D00065466 /* WebViewViewController.swift in Sources */,
+				37DD3C191F5C994300065466 /* Network.swift in Sources */,
+				37DD3C1E1F5C99C800065466 /* UseCaseNetworkProvider.swift in Sources */,
 				37DD3BE01F59DC9C00065466 /* City.swift in Sources */,
 				37DD3BF61F5B105700065466 /* Constants.swift in Sources */,
 				37DD3C031F5B1A6400065466 /* DomainConvertibleType.swift in Sources */,
 				37DD3C0D1F5B1A6400065466 /* RunLoopThreadScheduler.swift in Sources */,
+				37DD3C2D1F5D34C200065466 /* SearchProtocol.swift in Sources */,
 				37DD3C071F5B1A6400065466 /* RealmExt.swift in Sources */,
 				37DD3C091F5B1A6400065466 /* RealmRepo.swift in Sources */,
 			);

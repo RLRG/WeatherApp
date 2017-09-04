@@ -8,6 +8,9 @@ use_frameworks!
 pod 'RxSwift', '=3.5.0'
 pod 'SwiftLint', '=0.20.1'
 
+#UI
+pod 'SearchTextField', '=1.1.4'
+
 # NETWORK
 pod 'Alamofire', '=4.5.0'
 pod 'RxAlamofire', '=3.0.3'
