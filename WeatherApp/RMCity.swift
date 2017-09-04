@@ -15,7 +15,7 @@ final class RMCity: Object {
     dynamic var timeRequested: Date = Date()
     
     override class func primaryKey() -> String? {
-        return "timeRequested"
+        return "name"
     }
 }
 
@@ -23,7 +23,7 @@ final class RMCity: Object {
 extension RMCity: DomainConvertibleType {
     func asDomain() -> City {
         return City(name: name,
-                     timeRequested: timeRequested)
+                    timeRequested: timeRequested)
     }
 }
 
