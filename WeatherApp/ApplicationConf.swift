@@ -24,7 +24,9 @@ final class Application {
         let getLatestCitiesUseCase = GetLatestCitiesUseCase(repository: realmCityRepo)
         let useCaseNetworkProvider = UseCaseNetworkProvider()
         let searchWeatherUseCase = useCaseNetworkProvider.makeGetWeatherResult()
-        let presenter = SearchPresenter(saveNewLatestCityUseCase: saveNewLatestCityUseCase, getLatestCitiesUseCase: getLatestCitiesUseCase, searchWeatherUseCase: searchWeatherUseCase)
+        let useCaseNetworkProviderForFlickr = UseCaseNetworkProviderForFlickr()
+        let getImageUrlUseCase = useCaseNetworkProviderForFlickr.makeGetWeatherResult()
+        let presenter = SearchPresenter(saveNewLatestCityUseCase: saveNewLatestCityUseCase, getLatestCitiesUseCase: getLatestCitiesUseCase, searchWeatherUseCase: searchWeatherUseCase, getImageUrlUseCase: getImageUrlUseCase)
         searchVC.presenter = presenter
         presenter.searchViewControllerImplementation = searchVC
         

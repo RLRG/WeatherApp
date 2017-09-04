@@ -68,6 +68,18 @@
 		37DD3C2E1F5D34C200065466 /* SearchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C2C1F5D34C200065466 /* SearchProtocol.swift */; };
 		37DD3C301F5D358C00065466 /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C2F1F5D358C00065466 /* AlertsManager.swift */; };
 		37DD3C311F5D358C00065466 /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C2F1F5D358C00065466 /* AlertsManager.swift */; };
+		37DD3C331F5DB9BB00065466 /* GetImageUrlUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C321F5DB9BB00065466 /* GetImageUrlUseCase.swift */; };
+		37DD3C341F5DB9BB00065466 /* GetImageUrlUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C321F5DB9BB00065466 /* GetImageUrlUseCase.swift */; };
+		37DD3C361F5DB9FB00065466 /* UIImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C351F5DB9FB00065466 /* UIImageViewExt.swift */; };
+		37DD3C371F5DB9FB00065466 /* UIImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C351F5DB9FB00065466 /* UIImageViewExt.swift */; };
+		37DD3C391F5DBA5600065466 /* ImageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C381F5DBA5600065466 /* ImageResult.swift */; };
+		37DD3C3A1F5DBA5600065466 /* ImageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C381F5DBA5600065466 /* ImageResult.swift */; };
+		37DD3C3C1F5DBA7700065466 /* ImageResultNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C3B1F5DBA7700065466 /* ImageResultNetwork.swift */; };
+		37DD3C3D1F5DBA7700065466 /* ImageResultNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C3B1F5DBA7700065466 /* ImageResultNetwork.swift */; };
+		37DD3C3F1F5DBFD400065466 /* NetworkProviderForFlickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C3E1F5DBFD400065466 /* NetworkProviderForFlickr.swift */; };
+		37DD3C401F5DBFD400065466 /* NetworkProviderForFlickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C3E1F5DBFD400065466 /* NetworkProviderForFlickr.swift */; };
+		37DD3C421F5DC0DD00065466 /* UseCaseNetworkProviderForFlickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C411F5DC0DD00065466 /* UseCaseNetworkProviderForFlickr.swift */; };
+		37DD3C431F5DC0DD00065466 /* UseCaseNetworkProviderForFlickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD3C411F5DC0DD00065466 /* UseCaseNetworkProviderForFlickr.swift */; };
 		56F95D87021E103EADFB3B90 /* Pods_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D88AAC2FB7970DC1AF843A /* Pods_WeatherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +119,12 @@
 		37DD3C291F5CAF3000065466 /* ApplicationConf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationConf.swift; sourceTree = "<group>"; };
 		37DD3C2C1F5D34C200065466 /* SearchProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProtocol.swift; sourceTree = "<group>"; };
 		37DD3C2F1F5D358C00065466 /* AlertsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsManager.swift; sourceTree = "<group>"; };
+		37DD3C321F5DB9BB00065466 /* GetImageUrlUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetImageUrlUseCase.swift; sourceTree = "<group>"; };
+		37DD3C351F5DB9FB00065466 /* UIImageViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExt.swift; sourceTree = "<group>"; };
+		37DD3C381F5DBA5600065466 /* ImageResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResult.swift; sourceTree = "<group>"; };
+		37DD3C3B1F5DBA7700065466 /* ImageResultNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResultNetwork.swift; sourceTree = "<group>"; };
+		37DD3C3E1F5DBFD400065466 /* NetworkProviderForFlickr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProviderForFlickr.swift; sourceTree = "<group>"; };
+		37DD3C411F5DC0DD00065466 /* UseCaseNetworkProviderForFlickr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseNetworkProviderForFlickr.swift; sourceTree = "<group>"; };
 		A3CA7BACCDA32B1849795B72 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		B261A9ECA1C64910D04B2D47 /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BD48D605F5B9279E7AD792B8 /* Pods_WeatherAppLAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherAppLAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +232,7 @@
 				37DD3C131F5B1BC500065466 /* SaveNewLatestCityUseCase.swift */,
 				37DD3BEA1F5B0BEC00065466 /* GetLastestCitiesUseCase.swift */,
 				37DD3BD91F59DC1A00065466 /* SearchWeatherUseCase.swift */,
+				37DD3C321F5DB9BB00065466 /* GetImageUrlUseCase.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -232,8 +251,9 @@
 			isa = PBXGroup;
 			children = (
 				37DD3BF51F5B105700065466 /* Constants.swift */,
-				37DD3C231F5CAAF800065466 /* UIViewControllerExt.swift */,
 				37DD3C2F1F5D358C00065466 /* AlertsManager.swift */,
+				37DD3C231F5CAAF800065466 /* UIViewControllerExt.swift */,
+				37DD3C351F5DB9FB00065466 /* UIImageViewExt.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -263,6 +283,7 @@
 				37DD3BDF1F59DC9C00065466 /* City.swift */,
 				37DD3BE21F59DCDE00065466 /* Location.swift */,
 				37DD3BE51F59DCED00065466 /* WeatherResult.swift */,
+				37DD3C381F5DBA5600065466 /* ImageResult.swift */,
 			);
 			name = App_Logic;
 			sourceTree = "<group>";
@@ -271,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				37DD3C201F5C9A4E00065466 /* WeatherResultNetwork.swift */,
+				37DD3C3B1F5DBA7700065466 /* ImageResultNetwork.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -333,11 +355,29 @@
 		37DD3C161F5C992F00065466 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				37DD3C1D1F5C99C800065466 /* UseCaseNetworkProvider.swift */,
 				37DD3C171F5C994300065466 /* Network.swift */,
-				37DD3C181F5C994300065466 /* NetworkProvider.swift */,
+				37DD3C451F5DC0FC00065466 /* OpenWeather */,
+				37DD3C441F5DC0E600065466 /* Flickr */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		37DD3C441F5DC0E600065466 /* Flickr */ = {
+			isa = PBXGroup;
+			children = (
+				37DD3C411F5DC0DD00065466 /* UseCaseNetworkProviderForFlickr.swift */,
+				37DD3C3E1F5DBFD400065466 /* NetworkProviderForFlickr.swift */,
+			);
+			name = Flickr;
+			sourceTree = "<group>";
+		};
+		37DD3C451F5DC0FC00065466 /* OpenWeather */ = {
+			isa = PBXGroup;
+			children = (
+				37DD3C1D1F5C99C800065466 /* UseCaseNetworkProvider.swift */,
+				37DD3C181F5C994300065466 /* NetworkProvider.swift */,
+			);
+			name = OpenWeather;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,17 +593,23 @@
 				37DD3BEC1F5B0BEC00065466 /* GetLastestCitiesUseCase.swift in Sources */,
 				37DD3C251F5CAAF800065466 /* UIViewControllerExt.swift in Sources */,
 				37DD3C221F5C9A4E00065466 /* WeatherResultNetwork.swift in Sources */,
+				37DD3C3A1F5DBA5600065466 /* ImageResult.swift in Sources */,
+				37DD3C341F5DB9BB00065466 /* GetImageUrlUseCase.swift in Sources */,
 				37DD3BDB1F59DC1A00065466 /* SearchWeatherUseCase.swift in Sources */,
 				37DD3C1C1F5C994300065466 /* NetworkProvider.swift in Sources */,
 				37DD3BFA1F5B175500065466 /* ResultViewController.swift in Sources */,
 				37DD3BE41F59DCDE00065466 /* Location.swift in Sources */,
 				37DD3C311F5D358C00065466 /* AlertsManager.swift in Sources */,
+				37DD3C371F5DB9FB00065466 /* UIImageViewExt.swift in Sources */,
 				37DD3C2B1F5CAF3000065466 /* ApplicationConf.swift in Sources */,
+				37DD3C3D1F5DBA7700065466 /* ImageResultNetwork.swift in Sources */,
 				37DD3C281F5CAC7200065466 /* SearchPresenter.swift in Sources */,
 				37DD3BF41F5B0F9D00065466 /* WebViewViewController.swift in Sources */,
 				37DD3C1A1F5C994300065466 /* Network.swift in Sources */,
+				37DD3C401F5DBFD400065466 /* NetworkProviderForFlickr.swift in Sources */,
 				37DD3C1F1F5C99C800065466 /* UseCaseNetworkProvider.swift in Sources */,
 				37DD3BE11F59DC9C00065466 /* City.swift in Sources */,
+				37DD3C431F5DC0DD00065466 /* UseCaseNetworkProviderForFlickr.swift in Sources */,
 				37DD3BF71F5B105700065466 /* Constants.swift in Sources */,
 				37DD3C041F5B1A6400065466 /* DomainConvertibleType.swift in Sources */,
 				37DD3C0E1F5B1A6400065466 /* RunLoopThreadScheduler.swift in Sources */,
@@ -587,17 +633,23 @@
 				37DD3BEB1F5B0BEC00065466 /* GetLastestCitiesUseCase.swift in Sources */,
 				37DD3C241F5CAAF800065466 /* UIViewControllerExt.swift in Sources */,
 				37DD3C211F5C9A4E00065466 /* WeatherResultNetwork.swift in Sources */,
+				37DD3C391F5DBA5600065466 /* ImageResult.swift in Sources */,
+				37DD3C331F5DB9BB00065466 /* GetImageUrlUseCase.swift in Sources */,
 				37DD3BDA1F59DC1A00065466 /* SearchWeatherUseCase.swift in Sources */,
 				37DD3C1B1F5C994300065466 /* NetworkProvider.swift in Sources */,
 				37DD3BF91F5B175500065466 /* ResultViewController.swift in Sources */,
 				37DD3BE31F59DCDE00065466 /* Location.swift in Sources */,
 				37DD3C301F5D358C00065466 /* AlertsManager.swift in Sources */,
+				37DD3C361F5DB9FB00065466 /* UIImageViewExt.swift in Sources */,
 				37DD3C2A1F5CAF3000065466 /* ApplicationConf.swift in Sources */,
+				37DD3C3C1F5DBA7700065466 /* ImageResultNetwork.swift in Sources */,
 				37DD3C271F5CAC7200065466 /* SearchPresenter.swift in Sources */,
 				37DD3BF31F5B0F9D00065466 /* WebViewViewController.swift in Sources */,
 				37DD3C191F5C994300065466 /* Network.swift in Sources */,
+				37DD3C3F1F5DBFD400065466 /* NetworkProviderForFlickr.swift in Sources */,
 				37DD3C1E1F5C99C800065466 /* UseCaseNetworkProvider.swift in Sources */,
 				37DD3BE01F59DC9C00065466 /* City.swift in Sources */,
+				37DD3C421F5DC0DD00065466 /* UseCaseNetworkProviderForFlickr.swift in Sources */,
 				37DD3BF61F5B105700065466 /* Constants.swift in Sources */,
 				37DD3C031F5B1A6400065466 /* DomainConvertibleType.swift in Sources */,
 				37DD3C0D1F5B1A6400065466 /* RunLoopThreadScheduler.swift in Sources */,

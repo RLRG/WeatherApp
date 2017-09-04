@@ -15,14 +15,16 @@ class SearchPresenter {
     let saveNewLatestCityUseCase: SaveNewLatestCityUseCase
     let getLatestCitiesUseCase: GetLatestCitiesUseCase
     let searchWeatherUseCase: SearchWeatherUseCase
+    let getImageUrlUseCase: GetImageUrlUseCase
     var latestCities: Variable<[City]> = Variable([])
     var weatherResult: Variable<WeatherResult> = Variable(WeatherResult(temperature: 0, weatherIcon: "", city: City(name: "", timeRequested: Date()), location: Location(lat: 0, lon: 0)))
     let disposeBag = DisposeBag()
     
-    init (saveNewLatestCityUseCase: SaveNewLatestCityUseCase, getLatestCitiesUseCase: GetLatestCitiesUseCase, searchWeatherUseCase: SearchWeatherUseCase) {
+    init (saveNewLatestCityUseCase: SaveNewLatestCityUseCase, getLatestCitiesUseCase: GetLatestCitiesUseCase, searchWeatherUseCase: SearchWeatherUseCase, getImageUrlUseCase: GetImageUrlUseCase) {
         self.saveNewLatestCityUseCase = saveNewLatestCityUseCase
         self.getLatestCitiesUseCase = getLatestCitiesUseCase
         self.searchWeatherUseCase = searchWeatherUseCase
+        self.getImageUrlUseCase = getImageUrlUseCase
     }
     
     func saveCity(withName name: String) {
