@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Configuration
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        window = UIWindow(frame: UIScreen.main.bounds)
+        Application.shared.cleanArchitectureConfiguration(storyboard: mainStoryboard, mainWindow: window!)
         return true
     }
 
