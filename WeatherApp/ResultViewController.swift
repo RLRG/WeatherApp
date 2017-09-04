@@ -14,6 +14,7 @@ class ResultViewController : UIViewController {
     // MARK: Properties & Initialization
     
     var resultObject: WeatherResult!
+    var resultImage: ImageResult!
     
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -25,7 +26,7 @@ class ResultViewController : UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         
         cityNameLabel.text = resultObject.city.name
-        //imageView.image = UIImage(named: resultObject.weatherIcon)
+        imageView.downloadedFrom(link: resultImage.url)
         imageIconView.image = UIImage(named: resultObject.weatherIcon)
         tempLabel.text = "\(resultObject.temperature) ºC"
     }

@@ -58,11 +58,8 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
         setupCitiesDataObserver()
         presenter.getCities()
         
-        // Weather results
-        setupWeatherObserver()
-        
-        // Image URL result
-        setupImageURLObserver()
+        // Weather & ImageURL results
+        setupWeatherAndImageURLObservers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -120,28 +117,23 @@ class SearchViewController : UIViewController, UITextFieldDelegate {
             .disposed(by: disposeBag)
     }
     
-    func setupWeatherObserver() {
-        presenter.weatherResult.asObservable()
-            .subscribe({_ in
-                if (self.presenter.weatherResult.value.location.lat != 0 || self.presenter.weatherResult.value.location.lon != 0) {
+    func setupWeatherAndImageURLObservers() {
+        
+        let weatherObservable = presenter.weatherResult.asObservable()
+        let imageObservable = presenter.imageResult.asObservable()
+        
+        Observable
+            .zip(weatherObservable, imageObservable) { (weather, image) throws -> (WeatherResult, ImageResult) in
+                return (weather,image)
+            }.subscribe({ _ in
+                if ( (self.presenter.weatherResult.value.location.lat != 0 || self.presenter.weatherResult.value.location.lon != 0) && (self.presenter.imageResult.value.url != "")) {
                     DispatchQueue.main.async {
                         let resultViewController = UIStoryboard(name: "Main", bundle: nil)
                             .instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController // swiftlint:disable:this force_cast
                         resultViewController.resultObject = self.presenter.weatherResult.value
+                        resultViewController.resultImage = self.presenter.imageResult.value
                         // TODO: Include loading activity indicator.
                         self.navigationController?.pushViewController(resultViewController, animated: true)
-                    }
-                }
-            })
-            .disposed(by: disposeBag)
-    }
-    
-    func setupImageURLObserver() {
-        presenter.imageResult.asObservable()
-            .subscribe({_ in
-                if (self.presenter.imageResult.value.url != "") {
-                    DispatchQueue.main.async {
-                        print("URL_M = \(self.presenter.imageResult.value.url)")
                     }
                 }
             })
