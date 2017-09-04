@@ -46,7 +46,7 @@ This paragraph includes all the resources used to create this app project, inclu
 ### Other information resources
 | Resource | Description |
 | --- | --- |
-| App icon and buttons | Icon made by [Freepik](http://www.freepik.com/) from www.flaticon.com and all the sizes of the icon were generated with https://makeappicon.com/ |
+| App icon and buttons | Icon made by Rami McMin from www.flaticon.com and all the sizes of the icon were generated with https://makeappicon.com/ |
 
 ## Future work & Improvements
 Among other things:
