@@ -10,6 +10,7 @@ import Foundation
 
 struct WeatherResult {
     let temperature: Float
+    let weatherIcon: String
     let city: City
     let location: Location
 }
